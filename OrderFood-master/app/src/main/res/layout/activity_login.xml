@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#343434">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_background" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="100dp"
+                android:text="Wellcome Back"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/white"
+                android:background="@drawable/editext_background"
+                android:drawableStart="@drawable/name"
+                android:ems="10"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:drawablePadding="16dp"
+                android:hint="Student Id"
+                android:textColorHint="@color/white"
+                android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/editext_background"
+                android:drawableStart="@drawable/password"
+                android:ems="10"
+                android:padding="8dp"
+                android:drawablePadding="16dp"
+                android:hint="Password"
+                android:textColorHint="@color/white"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/btn_login" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Are you new user? Register"
+                android:layout_marginTop="32dp"
+                android:textColor="#E1A500"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

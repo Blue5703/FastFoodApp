@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uis.UpdateFragment">
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#343434">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/top_background" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="100dp"
+                    android:text="Edit \nInformation"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvUsernameUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Username"
+                    android:layout_marginTop="-20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="24sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="Firstname"
+
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:textColor="#E1A500"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtFirstnameUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/editext_background"
+                    android:drawableStart="@drawable/name"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="Firstname"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="Lastname"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:textColor="#E1A500"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtLastnameUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/editext_background"
+                    android:drawableStart="@drawable/name"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="Lastname"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:textColor="#E1A500"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Old password"
+                    />
+
+                <EditText
+                    android:id="@+id/edtOldPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/editext_background"
+                    android:drawableStart="@drawable/password"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="Old password"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="New password"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:textColor="#E1A500"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtNewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/editext_background"
+                    android:drawableStart="@drawable/password"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="New password"
+                    android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:text="Image"
+                    android:textColor="#E1A500"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtImageUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/editext_background"
+                    android:drawableStart="@drawable/name"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="Link image"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:textColor="#E1A500"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Phone number"
+                    />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumberUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/editext_background"
+                    android:drawableStart="@drawable/name"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="Phone number"
+                    android:inputType="phone"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="Address"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:textColor="#E1A500"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtAddressUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/editext_background"
+                    android:drawableStart="@drawable/name"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="100dp"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUpdate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/profile_btn"
+                        android:layout_margin="16dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="Edit Profile" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

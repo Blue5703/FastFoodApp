@@ -1,0 +1,136 @@
+CREATE TABLE User (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
+    first_name TEXT,
+    last_name TEXT,
+    password TEXT,
+    image TEXT,
+    phone_number TEXT,
+    address TEXT
+);
+CREATE TABLE Menu (
+    menu_id INTEGER PRIMARY KEY,
+    name TEXT
+);
+CREATE TABLE Food (
+    food_id INTEGER PRIMARY KEY ,
+    name TEXT,
+    price TEXT,
+    image TEXT,
+    menu_id INTEGER,
+    FOREIGN KEY (menu_id) REFERENCES Menu (menu_id)
+);
+CREATE TABLE Cart (
+    user_id INTEGER,
+    food_id INTEGER,
+    quantity INTEGER,
+    FOREIGN KEY (user_id) REFERENCES User (user_id),
+    FOREIGN KEY (food_id) REFERENCES Food (food_id)
+);
+CREATE TABLE Favourite (
+    user_id INTEGER,
+    food_id INTEGER,
+    FOREIGN KEY (user_id) REFERENCES User (user_id),
+    FOREIGN KEY (food_id) REFERENCES Food (food_id)
+);
+INSERT INTO User (username, first_name, last_name, password, image, phone_number, address)
+VALUES ('lbui2602', 'Bui', 'Luong', '12345678', NULL, '0376511565', 'Quoc Oai, Ha Noi');
+INSERT INTO User (username, first_name, last_name, password, image, phone_number, address)
+VALUES ('quilong2003', 'Le', 'Long', '12345678', NULL, '0936656743', 'Hung Yen');
+INSERT INTO User (username, first_name, last_name, password, image, phone_number, address)
+VALUES ('minh8atcx2', 'Nguyen Tuan', 'Minh', 'Minh5703@.', NULL, '0392383590', 'Thai Binh');
+INSERT INTO User (username, first_name, last_name, password, image, phone_number, address)
+VALUES ('caolong2003', 'Cao', 'Long', '12345678', NULL, '0912789666', 'Dien Chau, Nghe An');
+INSERT INTO User (username, first_name, last_name, password, image, phone_number, address)
+VALUES ('tutam2003', 'Nguyen', 'Tam', '12345678', NULL, '0376511565', 'Dong Anh, Ha Noi');
+INSERT INTO User (username, first_name, last_name, password, image, phone_number, address)
+VALUES ('maisao2003', 'Mai', 'Sao', '12345678', NULL, '0376511565', 'Dong Chau, Thai Binh');
+INSERT INTO Menu (menu_id, name)
+VALUES (1,'Chicken');
+INSERT INTO Menu (menu_id, name)
+VALUES (2,'Korean');
+INSERT INTO Menu (menu_id, name)
+VALUES (3,'Drink');
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (1,'Gà không xương nướng','299000', 'https://donchicken.vn/pub/media/catalog/product/cache/8872124951f387c8ded3f228faa55bea/g/_/g_n_ng_3-1.jpg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (2,'Gà nướng tỏi','299000', 'https://photo.znews.vn/w660/Uploaded/jaroin/2016_02_26/MN0502H_roastedgarlicclovechicken_s4x3.jpg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (3,'Gà nướng cay','299000', 'https://farm2.staticflickr.com/1447/25050995282_2df8c9c6d3_z.jpg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (4,'Gà nướng','269000', 'https://monngonmoingay.com/wp-content/smush-webp/2016/09/239-GaNuongXiMuoi-540-360.jpg.webp',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (5,'Gà rán không xương','319000', 'https://images.foody.vn/res/g18/176155/s400x400/aff8f480-4ed6-4ee4-b665-ffaced4f-5759338c-220528102128.jpeg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (6,'Gà rán sốt tương','319000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515212-ga-ran-sot-nuoc-tuong.jpg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (7,'Gà rán sốt cay','319000', 'https://images.foody.vn/res/g18/176155/s400x400/fe869ca5-3b37-4250-a05d-12a427da-052960c9-220603152134.jpeg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (8,'Gà Hallamayo','340000', 'https://images.foody.vn/res/g18/176155/s400x400/1cc3fa7c-2f70-4d52-862a-fc9d780d-71db9769-220505112121.jpeg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (9,'Cơm gà nướng','289000', 'https://images.foody.vn/res/g18/176155/s400x400/cfdf135a-06cc-4755-957e-9b484152-e3250dd0-220528101504.jpeg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (10,'Gà sốt phô mai','319000', 'https://images.foody.vn/res/g18/176155/s400x400/201775151016-ga-khong-xuong-sot-pho-mai-cay.jpg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (11,'Gà rán','309000', 'https://images.foody.vn/res/g18/176155/s400x400/d1ab8008-a844-4d5d-8c07-75753e83-63b84955-220603153607.jpeg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (12,'Đùi gà rán','169000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515054-dui-ga-ran.jpg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (27,'Gà Dakgangjeong','239000', 'https://images.foody.vn/res/g18/176155/s400x400/6ee5640c-023a-47ae-83ed-99a893b0-0372fe92-230331173855.jpeg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (32,'Gà phô mai tuyết','319000', 'https://images.foody.vn/res/g18/176155/s400x400/f6b0898d-365e-451a-949a-1db24dfdd30c.jpg',1);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (13,'Xúc xích hầm','229000', 'https://lcfoods.vn/wp-content/uploads/2021/10/lcfoods-xuc-xich-ham-dau.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (14,'Rose Tteokbokki','120000', 'https://images.foody.vn/res/g18/176155/s400x400/e9115363-eea3-4245-9b39-b31cbc78-61d8bcd6-220429101936.jpeg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (15,'Xúc xích hầm hải sản','309000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515626-xuc-xich-ham-hai-san.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (16,'Xúc xích hầm bacon','229000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515615-xuc-xich-ham-bacon.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (17,'Mì tteok-bokki hản sản','349000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515720-mi-tteok-bokki-pho-mai-hai-san.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (18,'Mì tteok-bokki xúc xích','339000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515729-mi-tteok-bokki-ham-xuc-xich.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (19,'Mì tteok-bokki phô mai','269000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515648-mi-tteokbokki-pho-mai.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (20,'Chân gà cay','130000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515829-chan-ga-cay.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (21,'Bánh xèo hải sản','109000', 'https://images.foody.vn/res/g18/176155/s400x400/2017751589-banh-xeo-hai-san.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (22,'Bánh xèo kim chi','109000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515819-banh-xeo-kim-chi-hai-san.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (23,'Miến trộn Hàn Quốc','129000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515031-mien-tron-han-quoc.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (33,'Cơm trộn hải sản','140000', 'https://images.foody.vn/res/g18/176155/s400x400/f8f0a080-8c5e-4d24-8ee7-d8e26115-6f911e26-220528111024.jpeg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (24,'Cơm trộn thịt bò','140000', 'https://images.foody.vn/res/g18/176155/s400x400/20177515013-com-tron-thit-bo.jpg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (25,'Canh đậu phụ','105000', 'https://images.foody.vn/res/g18/176155/s400x400/23c3e164-c6cb-480d-91d7-7c3f6ffc-c1c606cd-220528101547.jpeg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (26,'Canh kim chi','105000', 'https://images.foody.vn/res/g18/176155/s400x400/d0a1dbc0-795d-41bb-bed9-9e859492-45889e37-220528110942.jpeg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (28,'Cơm chiên kim chi','110000', 'https://images.foody.vn/res/g18/176155/s400x400/71f443e3-7d30-45e7-a759-447f6fa8-8a133071-220528110909.jpeg',2);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (29,'Nước lọc','10000', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZGgSMOTyMpsQ_pO1i-eF1zroY1NFUviOhAw&usqp=CAU',3);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (30,'Pepsi','20000', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgltSa213CoAwce4cnd3WZCkwQqa3vbXiNwg&usqp=CAU',3);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (31,'Cocacola','20000', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGUCTkL7bQTf_Jfu_vWMu9pgi3l3y2WM2RUw&usqp=CAU',3);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (34,'Bò húc','20000', 'https://hangnhapkhauthailan.com/images/hanghoa/bnuoc-tang-luc-bo-huc-lon-24-1-N7C.jpg',3);
+INSERT INTO Food (food_id, name, price, image, menu_id)
+VALUES (35,'Twister','20000', 'https://images.foody.vn/res/g99/985959/s400x400/e94e4c28-86c3-45f1-89be-e963c7ff-79ce6d3b-220808120449.jpeg',3);
+INSERT INTO Cart (user_id,food_id,quantity)
+VALUES (1,1,1);
+INSERT INTO Favourite (user_id,food_id)
+VALUES (1,5);
+INSERT INTO Favourite (user_id,food_id)
+VALUES (1,4);
+INSERT INTO Favourite (user_id,food_id)
+VALUES (1,2);
+
+
+
+
+
